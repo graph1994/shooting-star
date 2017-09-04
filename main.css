@@ -1,0 +1,35 @@
+@keyframes shooting-star {
+  0% {
+    opacity:1;transform:scale(0) translate3d(0, 0, 0)
+  }
+  15% {opacity:1}
+  25% {opacity:0;transform:scale(1) translate3d(180px, 0, 0)}
+  100% {opacity:0;transform:scale(0) translate3d(180px, 0, 0)}
+}
+.shooting-star {
+  position:absolute;
+  left:10%;
+  top:10%;
+  transform:rotate(30deg);
+  pointer-events:none;
+}
+.shooting-star img{
+  opacity:0;
+  animation-delay:0;
+  animation: shooting-star 6s infinite ease-out
+}.shooting-star-right{
+  position:absolute;
+  left:80%;
+  top:80%;
+  width:130px;
+  transform:rotate(-235deg);
+  pointer-events:none
+}
+.shooting-star-right img {
+    opacity:0;
+    animation: shooting-star 6s 3s infinite ease-out;
+    animation-delay:2.5s;
+}
+body {
+  background-color: black;
+}
